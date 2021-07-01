@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,35 +14,41 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GreenCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlG-PN-zMm">
-                                <rect key="frame" x="67" y="717" width="289" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlG-PN-zMm">
+                                <rect key="frame" x="62.5" y="711" width="289" height="40"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                 <state key="normal" title="Need help recycling?">
-                                    <color key="titleColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="iZg-6j-Tab" kind="show" id="Uwb-5v-A1p"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green Code-3" translatesAutoresizingMaskIntoConstraints="NO" id="6qU-YB-UFB">
-                                <rect key="frame" x="20" y="242" width="375" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Green Code-4" translatesAutoresizingMaskIntoConstraints="NO" id="6qU-YB-UFB">
+                                <rect key="frame" x="20" y="170" width="374" height="500"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mlG-PN-zMm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Jk-8s-EcU"/>
+                            <constraint firstItem="6qU-YB-UFB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="KHu-8U-wpg"/>
+                            <constraint firstItem="mlG-PN-zMm" firstAttribute="top" secondItem="6qU-YB-UFB" secondAttribute="bottom" constant="41" id="bLr-LJ-icL"/>
+                            <constraint firstItem="6qU-YB-UFB" firstAttribute="centerX" secondItem="mlG-PN-zMm" secondAttribute="centerX" id="fI5-MJ-uvN"/>
+                            <constraint firstItem="6qU-YB-UFB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="uU8-Qv-Jim"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="RMF-qo-vUG"/>
                     <connections>
                         <outlet property="greenCodeLogo" destination="6qU-YB-UFB" id="Cjk-Zj-s4T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+            <point key="canvasLocation" x="4" y="-38"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="YcI-v5-b58">
@@ -60,7 +67,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aV2-Lh-J4T" kind="show" id="d3e-De-IFM"/>
+                                    <segue destination="5T1-bt-klE" kind="show" id="esf-cI-iO4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQe-xG-pTs">
@@ -72,16 +79,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5T1-bt-klE" kind="show" id="gmJ-Mz-VNt"/>
+                                    <segue destination="aV2-Lh-J4T" kind="show" id="6R8-ts-0nb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-UV-eDr">
-                                <rect key="frame" x="0.0" y="37" width="424" height="484"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-UV-eDr">
+                                <rect key="frame" x="35" y="198" width="344" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Does this item have any contamination including but, not limited to: dirt, food residue,  or oil?">
+                                    <fragment content="Does this item have any contaminants, including but not limited to: dirt, food residue,  or oil?">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -91,13 +98,13 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mA8-FL-oLQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="nqb-GS-34d"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7M-8r-jqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718.84057971014499" y="93.75"/>
+            <point key="canvasLocation" x="698.55072463768124" y="-38.169642857142854"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="ZpL-lM-uIZ">
@@ -108,12 +115,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkw-TE-zlG">
-                                <rect key="frame" x="44" y="165" width="326" height="137"/>
+                                <rect key="frame" x="44" y="165" width="326" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="What type of material would you like to recycle?">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -122,11 +129,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUY-7F-Tjs">
-                                <rect key="frame" x="143" y="304" width="128" height="50"/>
+                                <rect key="frame" x="133" y="304" width="148" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="plastic">
+                                <state key="normal" title="🥽 plastic">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
@@ -134,53 +141,62 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbI-gb-ffe">
-                                <rect key="frame" x="143" y="385" width="128" height="50"/>
+                                <rect key="frame" x="133" y="385" width="148" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="paper">
+                                <state key="normal" title="📄 paper">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaW-r3-7OK">
-                                <rect key="frame" x="143" y="466" width="128" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="cardboard">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <connections>
+                                    <segue destination="1LH-Vo-Xdk" kind="show" id="Uf9-Oq-tne"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEE-eP-ibT">
-                                <rect key="frame" x="143" y="547" width="128" height="50"/>
+                                <rect key="frame" x="133" y="547" width="148" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="glass">
+                                <state key="normal" title="🥛 glass">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="3yP-9k-Gva" kind="show" id="9cu-AB-5TR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwf-zu-eMg">
-                                <rect key="frame" x="143" y="628" width="128" height="50"/>
+                                <rect key="frame" x="133" y="628" width="148" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="styrofoam">
+                                <state key="normal" title="◻️ styrofoam">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="a7C-jt-dUI" kind="showDetail" id="xRe-Ti-lQT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaW-r3-7OK">
+                                <rect key="frame" x="133" y="467" width="148" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <state key="normal" title="📦 cardboard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cnL-AA-Gci" kind="show" id="4Wm-9L-KrU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wg9-X8-2CT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="C2v-dn-XGp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGy-hI-H3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="-232"/>
+            <point key="canvasLocation" x="1424.6376811594205" y="-232.36607142857142"/>
         </scene>
         <!--Fourth View Controller-->
         <scene sceneID="bNk-KN-4Tt">
@@ -190,14 +206,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAo-0r-qQX">
+                                <rect key="frame" x="166" y="734" width="82" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="104"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                    <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="eeK-Ml-ev6"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqQ-up-hWt">
-                                <rect key="frame" x="7" y="-15" width="400" height="705"/>
+                                <rect key="frame" x="7" y="316" width="400" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">I'm sorry, this item cannot be recycled. Please wash or clean before recycling or properly dispose of this item in the trash. Thank you for your help!</string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="NSColor" systemColor="systemGreenColor"/>
                                             <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -207,30 +237,45 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kbr-bg-qaS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fx1-ZF-bDY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rs-zJ-CpG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="823"/>
+            <point key="canvasLocation" x="576.81159420289862" y="822.99107142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Fifteenth View Controller-->
         <scene sceneID="41L-sf-2wt">
             <objects>
-                <viewController id="R7g-xN-M0j" sceneMemberID="viewController">
+                <viewController id="R7g-xN-M0j" customClass="FifteenthViewController" customModule="GreenCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LFY-Hb-1Nr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6A-Ph-ofj">
-                                <rect key="frame" x="20" y="25" width="374" height="750"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKN-MZ-MtR">
+                                <rect key="frame" x="166" y="734" width="82" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="104"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                    <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ZX2-LZ-WN1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6A-Ph-ofj">
+                                <rect key="frame" x="20" y="136" width="374" height="590"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Cardboard is first collected at predesignated collection points. Then, the cardboard is sorted into either corrugated cardboard or boxboard. Boxboard being the thin cardboard used for everyday use items such as cereal boxes and corrugated cardboard being thicker cardboard used for industrialized use such as packaging for transported goods. The cardboard is shredded and pulped. The new substance is then filtered out for re-use</string>
+                                        <string key="content">Cardboard is first collected at predesignated collection points. Then, the cardboard is sorted into either corrugated cardboard or boxboard. Boxboard is the thin cardboard used in everyday items, such as cereal boxes. Corrugated cardboard is thicker, so it serves for industrial purposes, such as the packaging and transportation of goods. The cardboard is shredded and pulped. The new substance is then filtered out for re-use.</string>
                                         <attributes>
-                                            <font key="NSFont" size="20" name="Menlo-Regular"/>
+                                            <color key="NSColor" systemColor="systemGreenColor"/>
+                                            <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -239,38 +284,53 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9eT-QR-NzE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gVX-Ih-eeH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jw5-8a-RVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1283" y="1270"/>
+            <point key="canvasLocation" x="1282.608695652174" y="1259.5982142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Sixteenth View Controller-->
         <scene sceneID="xnj-vj-KIt">
             <objects>
-                <viewController id="yUK-RK-ZiC" sceneMemberID="viewController">
+                <viewController id="yUK-RK-ZiC" customClass="SixteenthViewController" customModule="GreenCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4uA-IF-DLC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0G-FR-po9">
-                                <rect key="frame" x="20" y="129" width="374" height="573"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kL-Gk-T2c">
+                                <rect key="frame" x="166" y="734" width="82" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="104"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                    <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="qSc-bU-GQd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0G-FR-po9">
+                                <rect key="frame" x="20" y="203" width="374" height="436"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Steps on recycling paper,
-Collection
-Transportation
-Sorting
-Pulping
-De-inking
-New papermaking
+                                        <string key="content">The steps to recycle paper include:
+1. Collection
+2. Transportation
+3. Sorting
+4. Pulping
+5. De-inking
+6. New paper-making
 Refer to the link below to learn about how you can make paper from recycled scraps at home!
 https://youtu.be/RR_218EtLJU</string>
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="20" name="Menlo-Regular"/>
+                                            <color key="NSColor" systemColor="systemGreenColor"/>
+                                            <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
@@ -284,31 +344,47 @@ https://youtu.be/RR_218EtLJU</string>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="maK-rp-6wW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YOx-hq-WH0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wcx-3I-7jA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1906" y="1260"/>
+            <point key="canvasLocation" x="1963.7681159420292" y="1259.5982142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Seventeenth View Controller-->
         <scene sceneID="kYG-6m-dcY">
             <objects>
-                <viewController id="4Oy-0R-rXt" sceneMemberID="viewController">
+                <viewController id="4Oy-0R-rXt" customClass="SeventeenthViewController" customModule="GreenCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v9w-6A-D85">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-AF-d3T">
-                                <rect key="frame" x="13" y="91" width="381" height="631"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQK-ec-GJ4">
+                                <rect key="frame" x="166" y="740" width="82" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="104"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                    <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="rX2-K6-qNP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="29" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-AF-d3T">
+                                <rect key="frame" x="17" y="56" width="381" height="676"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Glass is sent to a processor which then goes through several processes of sorting, cleaning, and crushing, it then becomes something known as cullet which is an industrial term for glass that can be made in the furnace. In America, however, there is actually a lack of glass being recycled in comparison to other countries because cullet processing forces are much less efficient 
+                                        <string key="content">Glass is sent to a processor and goes through several processes of sorting, cleaning, and crushing. It then becomes something known as cullet, which is an industrial term for glass that can be made in the furnace. In America, however, there is actually a lack of glass being recycled in comparison to other countries because cullet processing is much less efficient.
 Read more at the link below:
 https://cen.acs.org/materials/inorganic-chemistry/glass-recycling-US-broken/97/i6</string>
                                         <attributes>
-                                            <font key="NSFont" size="17" name="Menlo-Regular"/>
+                                            <color key="NSColor" systemColor="systemGreenColor"/>
+                                            <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -317,29 +393,33 @@ https://cen.acs.org/materials/inorganic-chemistry/glass-recycling-US-broken/97/i
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ghG-sb-X8U"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vTv-Uj-5Ya"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLN-xq-kjy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539.130434782609" y="1254.9107142857142"/>
+            <point key="canvasLocation" x="2669.5652173913045" y="1259.5982142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Thirteenth View Controller-->
         <scene sceneID="vpm-a4-wBC">
             <objects>
-                <viewController id="1LH-Vo-Xdk" sceneMemberID="viewController">
+                <viewController id="1LH-Vo-Xdk" customClass="ThirteenthViewController" customModule="GreenCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dkz-hm-yfL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWe-NZ-huG">
-                                <rect key="frame" x="143" y="509" width="128" height="50"/>
+                                <rect key="frame" x="143" y="611" width="128" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 <state key="normal" title="Click me!">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="yUK-RK-ZiC" kind="show" id="rXQ-jn-Yfp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0c-Qb-Vz2">
                                 <rect key="frame" x="433" y="121" width="585" height="106"/>
@@ -354,16 +434,15 @@ https://cen.acs.org/materials/inorganic-chemistry/glass-recycling-US-broken/97/i
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbu-mj-rSo">
-                                <rect key="frame" x="20" y="186" width="405" height="417"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbu-mj-rSo">
+                                <rect key="frame" x="20" y="291" width="374" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Paper is recyclable if uncontaminated. Possible contaminants include, but are not limited to: oil, grease, and, food residue. Refer below to learn more about the paper recycling process
-Paper is recyclable, refer below to learn more about the paper recycling process</string>
+                                        <string key="content">Paper is recyclable if uncontaminated. Possible contaminants include but are not limited to: oil, grease, and food residue. Refer below to learn more about the paper recycling process.</string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="17" name="Menlo-Regular"/>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -372,12 +451,13 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bfl-ys-4AO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2Ra-01-Zw8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STy-5w-Dxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905.7971014492755" y="606.69642857142856"/>
+            <point key="canvasLocation" x="1963.7681159420292" y="606.69642857142856"/>
         </scene>
         <!--Fifth View Controller-->
         <scene sceneID="Xs8-pk-OPq">
@@ -387,20 +467,6 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwE-wH-7Ed">
-                                <rect key="frame" x="44" y="109" width="326" height="137"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Which number is listed in the litle triangle with arrows?">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="24" name="Menlo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtO-xy-Onp">
                                 <rect key="frame" x="143" y="248" width="128" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -485,39 +551,78 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                     <segue destination="Jp1-CV-AFL" kind="show" id="Uc4-Mm-udA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXO-49-tzI">
+                                <rect key="frame" x="151" y="20" width="112" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="♼">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="132" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwE-wH-7Ed">
+                                <rect key="frame" x="44" y="120" width="326" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Which number is listed in the little triangle with arrows?">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="24" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="utU-Xf-bCA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="UWy-lD-ryL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sX4-Ss-c1r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2278" y="-277"/>
+            <point key="canvasLocation" x="2275.36231884058" y="-277.23214285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--Fourteenth View Controller-->
         <scene sceneID="NT6-7N-FCA">
             <objects>
-                <viewController id="3yP-9k-Gva" sceneMemberID="viewController">
+                <viewController id="3yP-9k-Gva" customClass="FourteenthViewController" customModule="GreenCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HD8-2I-ZYD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiB-fO-2Hy">
-                                <rect key="frame" x="143" y="494" width="128" height="50"/>
+                                <rect key="frame" x="143" y="606" width="128" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                 <state key="normal" title="Click me!">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4Oy-0R-rXt" kind="show" id="jtE-F8-vXv"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFa-sg-iB2">
-                                <rect key="frame" x="33" y="265" width="349" height="202"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFa-sg-iB2">
+                                <rect key="frame" x="33" y="348" width="349" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Glass is recyclable, refer below to learn more about the glass recycling process">
+                                    <fragment content="Glass is recyclable. Refer below to learn more about the glass recycling process">
                                         <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="24" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=".">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <font key="NSFont" size="17" name="Menlo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -527,12 +632,13 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jHL-SL-cag"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9wQ-AF-ccN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2T9-Lj-aJm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2488" y="607"/>
+            <point key="canvasLocation" x="2669.5652173913045" y="606.69642857142856"/>
         </scene>
         <!--Sixth View Controller-->
         <scene sceneID="q41-av-sBO">
@@ -543,12 +649,73 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqg-GJ-WLG">
-                                <rect key="frame" x="0.0" y="209" width="313" height="258"/>
+                                <rect key="frame" x="51" y="292" width="313" height="258"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Sorry, this type of plastic is rarely accepted, however, you may check with your local recycling center to confirm. ">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" systemColor="systemGreenColor"/>
+                                            <font key="NSFont" size="24" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eS-Jz-fmO">
+                                <rect key="frame" x="166" y="734" width="82" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="104"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                    <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="6g9-fk-61X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0dX-I5-6Ev"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="keV-FD-WAa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yvn-cu-efE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3675" y="523"/>
+        </scene>
+        <!--Twelfth View Controller-->
+        <scene sceneID="89h-3b-1eq">
+            <objects>
+                <viewController id="cnL-AA-Gci" customClass="TwelfthViewController" customModule="GreenCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7xh-bf-0N1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdN-13-5qU">
+                                <rect key="frame" x="143" y="561" width="128" height="50"/>
+                                <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="1lQ-sn-Jhu"/>
+                                    <constraint firstAttribute="height" constant="50" id="cGf-KJ-rbZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <state key="normal" title="Click me!">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="R7g-xN-M0j" kind="show" id="37c-WE-Egx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="11" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-vn-QOP">
+                                <rect key="frame" x="20" y="311" width="374" height="220"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Luckily, all cardboard can be recycled unless contaminated with grease or oil. Refer below to find out more about how cardboard is recycled.</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -557,78 +724,24 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="0dX-I5-6Ev"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="keV-FD-WAa"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yvn-cu-efE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2914" y="512"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="89h-3b-1eq">
-            <objects>
-                <viewController id="cnL-AA-Gci" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7xh-bf-0N1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="11" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-vn-QOP">
-                                <rect key="frame" x="20" y="193" width="374" height="470"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Luckily, all cardboard can be recycled unless contaiminated with grease or oil. Refer below to find out more about how cardboard is recycled.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Menlo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdN-13-5qU">
-                                <rect key="frame" x="125" y="521" width="128" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="Click me!">
-                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0zX-ef-jtm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0KL-vn-QOP" firstAttribute="top" secondItem="0zX-ef-jtm" secondAttribute="top" constant="311" id="5mu-eM-ZAt"/>
+                            <constraint firstItem="0zX-ef-jtm" firstAttribute="trailing" secondItem="JdN-13-5qU" secondAttribute="trailing" constant="143" id="KTc-hg-MyX"/>
+                            <constraint firstItem="0KL-vn-QOP" firstAttribute="leading" secondItem="7xh-bf-0N1" secondAttribute="leadingMargin" id="Zo8-QR-0dh"/>
+                            <constraint firstItem="0zX-ef-jtm" firstAttribute="bottom" secondItem="JdN-13-5qU" secondAttribute="bottom" constant="197" id="cWC-LC-OGx"/>
+                            <constraint firstItem="0KL-vn-QOP" firstAttribute="centerY" secondItem="7xh-bf-0N1" secondAttribute="centerY" id="ppS-yg-oww"/>
+                            <constraint firstItem="0KL-vn-QOP" firstAttribute="centerX" secondItem="JdN-13-5qU" secondAttribute="centerX" id="vP3-AW-2TT"/>
+                            <constraint firstItem="0KL-vn-QOP" firstAttribute="centerX" secondItem="7xh-bf-0N1" secondAttribute="centerX" id="xjT-VI-vjz"/>
+                            <constraint firstItem="JdN-13-5qU" firstAttribute="leading" secondItem="0zX-ef-jtm" secondAttribute="leading" constant="143" id="yUX-4f-Kfk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ph9-93-lYI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMX-Pf-khO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="607"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="7F7-9i-6fE">
-            <objects>
-                <viewController id="0FZ-Uf-ei2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xC7-zg-Ich">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="testing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmd-4b-BGm">
-                                <rect key="frame" x="186" y="383" width="53" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="npS-pK-g2e"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xkb-GN-0qr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3666.666666666667" y="525"/>
+            <point key="canvasLocation" x="1282.608695652174" y="606.69642857142856"/>
         </scene>
         <!--Seventh View Controller-->
         <scene sceneID="LKk-zt-oex">
@@ -644,7 +757,7 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 <attributedString key="attributedText">
                                     <fragment content="What type of item would you like to recycle?">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -657,7 +770,7 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="bottle">
+                                <state key="normal" title="🧴 bottle">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
@@ -669,7 +782,7 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="container">
+                                <state key="normal" title="🥡 container">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -681,7 +794,7 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="bag">
+                                <state key="normal" title="🛍 bag">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -693,7 +806,7 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="wrap/film">
+                                <state key="normal" title="🎞 wrap/film">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -705,7 +818,7 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="cup">
+                                <state key="normal" title="🥤 cup">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -717,7 +830,7 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.093610115349999995" green="0.50171649460000001" blue="0.23724618550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
-                                <state key="normal" title="flexible packaging">
+                                <state key="normal" title="🧋 flexible packaging">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -726,7 +839,7 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MaC-Bc-idP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="feX-3m-SlM"/>
                 </viewController>
@@ -772,7 +885,7 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 <attributedString key="attributedText">
                                     <fragment content="Does this plastic cup have any wax or excess plastic coating?">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -780,14 +893,9 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMQ-Fn-HX8">
-                                <rect key="frame" x="183" y="102" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gwk-Lt-se3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="Gqg-KI-FG3"/>
                 </viewController>
@@ -804,13 +912,13 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXU-8N-jRV">
-                                <rect key="frame" x="30" y="272" width="354" height="352"/>
+                                <rect key="frame" x="30" y="245" width="354" height="352"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">This item can be recycled! Please recycle this item by shape. Ensure the item is clean and dry, then put the cap back on before tossing into the recycling bin.  Thank you for your help!</string>
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" systemColor="systemGreenColor"/>
                                             <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -823,9 +931,23 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCi-c8-sF7">
+                                <rect key="frame" x="166" y="734" width="82" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="104"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                    <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="HLH-8a-TOV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1oL-eb-7l1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="CS4-gX-6Vj"/>
                 </viewController>
@@ -833,22 +955,22 @@ Paper is recyclable, refer below to learn more about the paper recycling process
             </objects>
             <point key="canvasLocation" x="3581" y="-1262"/>
         </scene>
-        <!--Ninth View Controller-->
+        <!--Tenth View Controller-->
         <scene sceneID="SYV-gU-mTM">
             <objects>
-                <viewController id="a7C-jt-dUI" customClass="NinthViewController" customModule="GreenCode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="a7C-jt-dUI" customClass="TenthViewController" customModule="GreenCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bvw-83-42Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAN-k4-SiU">
-                                <rect key="frame" x="25" y="272" width="365" height="352"/>
+                                <rect key="frame" x="25" y="245" width="365" height="352"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">I'm sorry, this item cannot be recycled. Please reuse this item whenever possible (or search for local options to recycle). Thank you for your help!</string>
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" systemColor="systemGreenColor"/>
                                             <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -861,9 +983,23 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88i-TJ-OcA">
+                                <rect key="frame" x="166" y="734" width="82" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="104"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                    <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="cme-nh-CJF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sKJ-cq-L6B"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="dyT-t3-0Uc"/>
                 </viewController>
@@ -871,22 +1007,36 @@ Paper is recyclable, refer below to learn more about the paper recycling process
             </objects>
             <point key="canvasLocation" x="4585.507246376812" y="-1262.2767857142856"/>
         </scene>
-        <!--Ninth View Controller-->
+        <!--Eleventh View Controller-->
         <scene sceneID="rRx-4y-28W">
             <objects>
-                <viewController id="JnX-Do-jGi" customClass="NinthViewController" customModule="GreenCode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JnX-Do-jGi" customClass="EleventhViewController" customModule="GreenCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cw5-1J-cDi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC6-iO-Xo6">
+                                <rect key="frame" x="166" y="734" width="82" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="104"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                    <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="7F4-wl-EEb"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yah-nZ-zrG">
-                                <rect key="frame" x="25" y="272" width="365" height="352"/>
+                                <rect key="frame" x="25" y="312" width="365" height="218"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">I'm sorry, this item cannot be recycled. Please properly dispose of this item in the trash. Please trash any plastic lids as well. Thank you for your help!</string>
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" systemColor="systemGreenColor"/>
                                             <font key="NSFont" size="24" name="Menlo-Regular"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -901,25 +1051,30 @@ Paper is recyclable, refer below to learn more about the paper recycling process
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ovj-Ke-ubf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="VUP-tm-ZW2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSQ-7Z-yLo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4586" y="-88"/>
+            <point key="canvasLocation" x="4585.507246376812" y="-88.392857142857139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xRe-Ti-lQT"/>
-        <segue reference="hwE-WD-GN7"/>
+        <segue reference="9M1-l0-M6b"/>
+        <segue reference="HpX-3O-Zq8"/>
         <segue reference="aL2-uV-67H"/>
-        <segue reference="2mC-9V-M7D"/>
+        <segue reference="PtB-pY-rZi"/>
+        <segue reference="cme-nh-CJF"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Green Code-3" width="500" height="500"/>
+        <image name="Green Code-4" width="500" height="500"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
